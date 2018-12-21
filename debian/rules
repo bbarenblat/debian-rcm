@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@ --no-parallel --with autoreconf
+
+.PHONY: override_dh_autoreconf
+override_dh_autoreconf:
+	dh_autoreconf -- ./autogen.sh
