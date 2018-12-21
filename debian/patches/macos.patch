@@ -1,0 +1,52 @@
+From: Benjamin Barenblat <bbaren@debian.org>
+Subject: Remove references to macOS from documentation
+Forwarded: not-needed
+--- a/man/lsrc.1
++++ b/man/lsrc.1
+@@ -181,16 +181,6 @@
+ and
+ .Lk http://thoughtbot.se thoughtbot
+ .Sh BUGS
+-For macOS systems, we strongly encourage the use of the
+-.Va HOSTNAME
+-variable in your
+-.Xr rcrc 5 .
+-We use the
+-.Xr hostname 1
+-program to determine the unique identifier for the host. This program is
+-not specified by POSIX and can vary by system. On macOS the hostname is
+-unpredictable, and can even change as part of the DHCP handshake.
+-.Pp
+ There are a few bugs around shell globs. Anything involving an exclude
+ pattern is unpredictable, so use
+ .Fl v
+--- a/man/rcm.7.mustache
++++ b/man/rcm.7.mustache
+@@ -244,10 +244,6 @@
+ flag.
+ .Pp
+ .Dl mkrc -B eggplant .rcrc
+-.Pp
+-macOS users should see the
+-.Sx BUGS
+-section for more details.
+ .
+ .Sh STANDALONE INSTALLATION SCRIPT
+ .
+@@ -301,16 +297,6 @@
+ .An "Mike Burns" Aq Mt mburns@thoughtbot.com
+ and
+ .Lk http://thoughtbot.se thoughtbot
+-.Sh BUGS
+-For macOS systems, we strongly encourage the use of the
+-.Va HOSTNAME
+-variable in your
+-.Xr rcrc 5 .
+-We use the
+-.Xr hostname 1
+-program to determine the unique identifier for the host. This program is
+-not specified by POSIX and can vary by system. On macOS, the hostname is
+-unpredictable, and can even change as part of the DHCP handshake.
+ .Sh CONTRIBUTORS
+ .An -split
+ {{#contributors}}
