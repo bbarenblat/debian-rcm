@@ -1,0 +1,13 @@
+From: Benjamin Barenblat <bbaren@debian.org>
+Subject: Remove CONTRIBUTORS section from rcm.7
+Forwarded: not-needed
+
+See README.Debian.
+--- a/autogen.sh
++++ b/autogen.sh
+@@ -3,4 +3,4 @@
+ aclocal &&
+   autoconf &&
+   automake --add-missing --copy &&
+-  ./maint/autocontrib man/rcm.7.mustache
++  sed -n '/.Sh CONTRIBUTORS/q; p' man/rcm.7.mustache >man/rcm.7
