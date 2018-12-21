@@ -1,0 +1,40 @@
+From: Benjamin Barenblat <bbaren@debian.org>
+Subject: Always use /bin/sh to run rcm
+Forwarded: not-needed
+
+rcm only requires a POSIX-compliant shell – not Bash. The various sh
+options in Debian are POSIX-compliant, and many of them are
+substantially faster than Bash. Force rcm to run under /bin/sh,
+regardless of what shell’s interpreting the configure script.
+--- a/bin/lsrc.in
++++ b/bin/lsrc.in
+@@ -1,4 +1,4 @@
+-#!@SHELL@
++#!/bin/sh
+ 
+ : ${RCM_LIB:=$(dirname "$0")/../share/rcm}
+ . "$RCM_LIB/rcm.sh"
+--- a/bin/mkrc.in
++++ b/bin/mkrc.in
+@@ -1,4 +1,4 @@
+-#!@SHELL@
++#!/bin/sh
+ 
+ : ${RCM_LIB:=$(dirname "$0")/../share/rcm}
+ . "$RCM_LIB/rcm.sh"
+--- a/bin/rcdn.in
++++ b/bin/rcdn.in
+@@ -1,4 +1,4 @@
+-#!@SHELL@
++#!/bin/sh
+ 
+ : ${RCM_LIB:=$(dirname "$0")/../share/rcm}
+ . "$RCM_LIB/rcm.sh"
+--- a/bin/rcup.in
++++ b/bin/rcup.in
+@@ -1,4 +1,4 @@
+-#!@SHELL@
++#!/bin/sh
+ 
+ : ${RCM_LIB:=$(dirname "$0")/../share/rcm}
+ . "$RCM_LIB/rcm.sh"
