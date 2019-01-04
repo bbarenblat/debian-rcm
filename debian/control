@@ -5,13 +5,14 @@ Maintainer: Benjamin Barenblat <bbaren@debian.org>
 Build-Depends:
  debhelper (>= 10),
  python-cram,
-Standards-Version: 4.2.1
+Standards-Version: 4.3.0
 Homepage: https://github.com/thoughtbot/rcm
 Vcs-Browser: https://git.benjamin.barenblat.name/debian-rcm/
 Vcs-Git: https://git.benjamin.barenblat.name/debian-rcm.git
 
 Package: rcm
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Description: tool to manage rc files (dotfiles)
  rcm is a suite of tools to manage rc files (dotfiles). The tools keep dotfiles
