@@ -5,7 +5,7 @@ Maintainer: Benjamin Barenblat <bbaren@debian.org>
 Build-Depends:
  debhelper (>= 10),
  python3-cram,
-Standards-Version: 4.3.0
+Standards-Version: 4.4.1
 Homepage: https://github.com/thoughtbot/rcm
 Vcs-Browser: https://git.benjamin.barenblat.name/debian-rcm/
 Vcs-Git: https://git.benjamin.barenblat.name/debian-rcm.git
