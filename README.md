@@ -22,16 +22,15 @@ Arch Linux:
 
   https://aur.archlinux.org/packages/rcm/
 
-Debian-based:
+Debian (see further down for Ubuntu):
 
     wget -qO - https://apt.thoughtbot.com/thoughtbot.gpg.key | sudo apt-key add -
     echo "deb https://apt.thoughtbot.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/thoughtbot.list
     sudo apt-get update
     sudo apt-get install rcm
 
-Fedora 22, 23, 24, 25:
+Fedora:
 
-    sudo dnf copr enable seeitcoming/rcm
     sudo dnf install rcm
 
 FreeBSD:
@@ -57,7 +56,6 @@ Korora:
 
 macOS with Homebrew:
 
-    brew tap thoughtbot/formulae
     brew install rcm
 
 macOS with MacPorts:
@@ -70,8 +68,14 @@ OpenBSD:
 
 openSUSE/RHEL/CentOS: [instructions](http://software.opensuse.org/download.html?project=utilities&package=rcm)
 
-Ubuntu:
+Ubuntu (19.04 or later):
 
+    sudo apt update
+    sudo apt install rcm
+
+Ubuntu (12.04, 14.04, 16.04, 18.04, or 18.10):
+
+    sudo apt-get install software-properties-common
     sudo add-apt-repository ppa:martin-frost/thoughtbot-rcm
     sudo apt-get update
     sudo apt-get install rcm
