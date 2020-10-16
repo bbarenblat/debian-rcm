@@ -3,10 +3,11 @@ Subject: Remove references to macOS from documentation
 Forwarded: not-needed
 --- a/man/lsrc.1
 +++ b/man/lsrc.1
-@@ -181,16 +181,6 @@
+@@ -180,13 +180,3 @@
+ .An "Mike Burns" Aq Mt mburns@thoughtbot.com
  and
  .Lk http://thoughtbot.se thoughtbot
- .Sh BUGS
+-.Sh BUGS
 -For macOS systems, we strongly encourage the use of the
 -.Va HOSTNAME
 -variable in your
@@ -16,10 +17,6 @@ Forwarded: not-needed
 -program to determine the unique identifier for the host. This program is
 -not specified by POSIX and can vary by system. On macOS the hostname is
 -unpredictable, and can even change as part of the DHCP handshake.
--.Pp
- There are a few bugs around shell globs. Anything involving an exclude
- pattern is unpredictable, so use
- .Fl v
 --- a/man/rcm.7.mustache
 +++ b/man/rcm.7.mustache
 @@ -244,10 +244,6 @@

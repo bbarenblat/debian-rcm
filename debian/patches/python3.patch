@@ -2,7 +2,7 @@ From: Benjamin Barenblat <bbaren@debian.org>
 Subject: Use Python 3
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -51,4 +51,4 @@
+@@ -54,4 +54,4 @@
  dist_check_SCRIPTS = $(TESTS)
  dist_check_DATA = test/helper.sh
  
